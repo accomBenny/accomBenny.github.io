@@ -5,25 +5,45 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>工作坊</title>
         <link href="./styles.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="./main.js"></script>
     </head>
-    <body>
+    <body style="background-color: #283136;">
         <main>
-            <!--  -->
             <div class="maniPulate">
-                <!--使用者區塊，-->
                 <div class="editArea" id="editArea">
-                    <!--編輯區塊-->
-
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+                        aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalLabel">留言區</h5>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                </div>
+                                <div class="modal-body">
+                                    <input type="radio" name="gender" id="man" value="男">男
+                                    <input type="radio" name="gender" id="woman"value="女">女
+                                    <input type="text" id="userName" placeholder="請輸入使用者名稱" required><br>
+                                </div>
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="sendUsername">登入</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
                     <div class="editNav" >
-                        <div class="gender">男</div>
-                        <div class="username">使用者</div>
-                        <div class="changeBackground">鉛筆圖案</div>
+                        <button type="button" class="loginBtn" data-bs-toggle="modal" data-bs-target="#exampleModal" id="login">
+                        登入
+                    </button>
+                        <div class="gender" id="genderNav" style="display: none;"></div>
+                        <div class="username" id="userNav" style="display: none;"></div>
                     </div>
                     <div class="testareaContainer">
-                        <textarea class="editTextBoard" id="textContent">
-   你不覺得，你們很可悲嗎?
-                        </textarea>
+                        <textarea class="editTextBoard" id="textContent"
+                        ></textarea>
                     </div>
 
                     <div  class="editAction">
@@ -34,31 +54,12 @@
                 </div>
             </div>
 
-            <!--編輯完成並上傳的區塊，-->
             <div class="doneArea">
-                <div class="uploadArea">
-
-                    <!-- 使用者的留言板 -->
-                    <div class="copyMessage">
-                        <div class="copyNav">
-                            <div class="copygender">男</div>
-                            <div class="copyusername" id="getUsername"></div>
-                            <div class="copychangeBackground">鉛筆圖案</div>
-                        </div>
-                        <div class="copytestareaContainer">
-                            <textarea  class="copyeditTextBoard" id="copyText"></textarea>
-                        </div>
-                        <div  class="CopyeditAction">
-                            <button class="upload" id="uploadBtn">
-                                新增
-                            </button>
-                        </div>
-                    </div>
-                     <!-- 使用者的留言板 -->
-
+                <h1>留言板</h1>
+                <div class="container">
+                    <div class="loading" id="loadingAnimate"><h1>Loading...</h1></div>
                 </div>
             </div>
         </main>
-        <script src="./main.js"></script>
     </body>
 </html>
