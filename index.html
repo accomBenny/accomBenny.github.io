@@ -1,65 +1,90 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>工作坊</title>
-        <link href="./styles.css" rel="stylesheet" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-        <script src="./main.js"></script>
-    </head>
-    <body style="background-color: #283136;">
-        <main>
-            <div class="maniPulate">
-                <div class="editArea" id="editArea">
-                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-                        aria-hidden="true">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>工作坊1</title>
+    <link  rel="stylesheet" href="./CSS/styles.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <script src="./JS/main.js"></script>
+</head>
+
+<body class="container ">
+        <div class="row  overflow-y-auto">
+            <div class="col-1"></div>
+            <div class="col-5 rounded-5 ">
+                <div class="bg-secondary  rounded">
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                        aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog modal-dialog-centered" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="exampleModalLabel">留言區</h5>
-                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                        aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <input type="radio" name="gender" id="man" value="男">男
-                                    <input type="radio" name="gender" id="woman"value="女">女
-                                    <input type="text" id="userName" placeholder="請輸入使用者名稱" required><br>
+                                    <input type="radio" name="gender" id="woman" value="女">女
+                                    <input type="text" id="userName" class="form-control"
+                                        placeholder="請輸入使用者名稱" required><br>
                                 </div>
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-primary" data-bs-dismiss="modal" id="sendUsername">登入</button>
+                                    <button type="button" class="btn btn-success " data-bs-dismiss="modal"
+                                        id="sendUsername">登入</button>
                                 </div>
                             </div>
                         </div>
                     </div>
-                
-                    <div class="editNav" >
-                        <button type="button" class="loginBtn" data-bs-toggle="modal" data-bs-target="#exampleModal" id="login">
-                        登入
-                    </button>
-                        <div class="gender" id="genderNav" style="display: none;"></div>
-                        <div class="username" id="userNav" style="display: none;"></div>
+
+                    <div class="editNav mt-3 p-2 d-flex ">
+                        <button type="button" class="btn btn-success btn-lg" data-bs-toggle="modal"
+                            data-bs-target="#exampleModal" id="login">
+                            登入
+                        </button>
+                        <div class="col-2 fs-2 fw-bold text-warning " id="genderNav" style="display: none;"></div>
+                        <div class="col-4  text-truncate fs-2 fw-bold text-warning " id="userNav" style="display: none;"></div>
                     </div>
-                    <div class="testareaContainer">
-                        <textarea class="editTextBoard" id="textContent"
-                        ></textarea>
+                    <div class="testareaContainer mt-3">
+                        <textarea class="form-control " style="resize: none; height: 200px;" id="textContent"></textarea>
                     </div>
 
-                    <div  class="editAction">
-                        <button class="uploadBtn" id="upload" >
+                    <div class="editAction mt-3 d-flex justify-content-end p-2">
+                        <button class="btn btn-primary uploadBtn " id="upload">
                             新增
                         </button>
                     </div>
                 </div>
             </div>
 
-            <div class="doneArea">
-                <h1>留言板</h1>
+            <div class="col-5  bg-body-secondary  overflow-y" id="doneArea" style="overflow-y: auto;">
+                <h1 class="text-center text-black fw-bold">留言板</h1>
                 <div class="container">
-                    <div class="loading" id="loadingAnimate"><h1>Loading...</h1></div>
+                    <div class="text-center " id="loadingAnimate" style="display: none;"><h1>Loading...</h1></div>
+                </div>
+                
+                <div class="row rounded-5 p-4 ">
+                    <div class="col d-flex bg-secondary  rounded-top-4">
+                        <div class="col-1 text-warning " id="getUsergender">男</div>
+                        <div class="col-1 text-warning text-truncate" id="getUsername">名字</div>
+                        <div class="col-3"></div>
+                        <div class="col-5 text-warning " id="getTime">2023/11/11 下午17:26:27</div>
+                       
+                        <button class="btn btn-danger btn-sm  d-flex " id="deleteMessage ">刪除</button>
+                    </div>
+                    <div class=" bg-white p-3 rounded-1">
+                        <div class="w-auto d-inline-block" id="copyText"></div>
+                    </div>
+                    
                 </div>
             </div>
-        </main>
-    </body>
+        </div>
+    </main>
+</body>
+
 </html>
