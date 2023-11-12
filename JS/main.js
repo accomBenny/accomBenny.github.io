@@ -41,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <button class="btn btn-danger btn-sm d-flex" id="deleteMessage">刪除</button>
                 </div>
                 <div class="parent-element text-wrap bg-white p-3 rounded-1">
-                    <div class="w-auto d-inline-block" id="copyText"></div>
+                    <div class="w-auto d-inline-block parent-element" id="copyText"></div>
                 </div>
             </div>
         `;
