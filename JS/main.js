@@ -8,8 +8,6 @@ document.addEventListener("DOMContentLoaded", function () {
     var doneArea = document.getElementById("doneArea");
     var textContent = document.getElementById("textContent");
     var userNameInput = document.getElementById("userName");
-    var 
-
     sendUsernameBtn.addEventListener("click", function () {
         var genderRadio = document.querySelector(
             "input[type=radio][name=gender]:checked"
@@ -56,7 +54,6 @@ document.addEventListener("DOMContentLoaded", function () {
             message.querySelector("#getUsername").textContent = username;
             message.querySelector("#copyText").textContent = textContent.value;
             message.querySelector("#getTime").textContent = formattedTime;
-
             message
                 .querySelector("#deleteMessage")
                 .addEventListener("click", function () {

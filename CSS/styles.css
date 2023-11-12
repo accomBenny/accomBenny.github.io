@@ -1,5 +1,5 @@
 body{
-    background-image: url('assets/rain.png');
+    background-image: url('/assets/rain.png');
     background-repeat: no-repeat;/*背景圖的重複方式*/
     background-attachment: fixed;/*背景圖的位置要固定、隨著包含快滾動*/
     background-position: center;/*每一個背景圖的初始位置*/
