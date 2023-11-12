@@ -8,12 +8,12 @@ document.addEventListener("DOMContentLoaded", function () {
     var doneArea = document.getElementById("doneArea");
     var textContent = document.getElementById("textContent");
     var userNameInput = document.getElementById("userName");
+    var 
 
     sendUsernameBtn.addEventListener("click", function () {
         var genderRadio = document.querySelector(
             "input[type=radio][name=gender]:checked"
         );
-
         genderNav.textContent = genderRadio ? genderRadio.value : "可頌";
         userNav.textContent = userNameInput.value || "訪客";
 

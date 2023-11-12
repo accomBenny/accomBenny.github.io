@@ -5,6 +5,7 @@ body{
     background-position: center;/*每一個背景圖的初始位置*/
     background-size: cover;/*設置背景大小*/
 }
+
 /* main {
     display: flex;
     justify-content: space-around;
