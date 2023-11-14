@@ -40,7 +40,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     <div class="col-5 text-warning ml-auto" id="getTime">2023/11/11 下午17:26:27</div>
                     <button class="btn btn-danger btn-sm d-flex" id="deleteMessage">刪除</button>
                 </div>
-                <div class="parent-element text-wrap bg-white p-3 rounded-1">
+                <div class="parent-element text-wrap bg-white p-3 rounded-1 text-break">
                     <div class="w-auto d-inline-block parent-element" id="copyText"></div>
                 </div>
             </div>
