@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let uploadBtn = document.getElementById("upload");
     let loginBtn = document.getElementById("login");
     let loadingAnimate = document.getElementById("loadingAnimate");
-    let doneArea = document.getElementById("doneArea");
+    let placeMessage = document.getElementById("placeMessage");
     let textContent = document.getElementById("textContent");
     let userNameInput = document.getElementById("userName");
     sendUsernameBtn.addEventListener("click", function () {
@@ -45,7 +45,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 </div>
             </div>
         `;
-            message.querySelector("#getUsergender").textContent =genderNav.textContent;
+            message.querySelector("#getUsergender").textContent =
+                genderNav.textContent;
             message.querySelector("#getUsername").textContent = username;
             message.querySelector("#copyText").textContent = textContent.value;
             message.querySelector("#getTime").textContent = formattedTime;
@@ -57,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
             setTimeout(function () {
                 loadingAnimate.style.display = "none";
-                doneArea.appendChild(message);
+                placeMessage.appendChild(message);
                 uploadBtn.style.display = "block";
                 uploadBtn.style.pointerEvents = "auto";
             }, 500);
