@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Benny",
+        "age": 20,
+        "email": "cs921029@example.com",
+        "address": {
+            "country": "Taiwan",
+            "city": "TaiChung",
+            "floor": 5
+        }
+    },
+    {
+        "name": "Alex",
+        "age": 58,
+        "email": "Alex@example.com",
+        "address": {
+            "country": "Japan",
+            "city": "Shibuya",
+            "floor": 2
+        }
+    },
+    {
+        "name": "Yumi",
+        "age": 16,
+        "email": "Yumi@example.com",
+        "address": {
+            "country": "SummonRift",
+            "city": "BOT",
+            "floor": 0
+        }
+    }
+]

@@ -1,0 +1,35 @@
+[
+    {
+        "image": "./assets/iu.jpg",
+        "name": "IU",
+        "age": 30,
+        "email": "IU@example.com",
+        "address": {
+            "country": "Korean",
+            "city": "Seoul",
+            "floor": 100
+        }
+    },
+    {
+        "image": "./assets/amon.jpeg",
+        "name": "Benny",
+        "age": 20,
+        "email": "cs921029@example.com",
+        "address": {
+            "country": "Taiwan",
+            "city": "TaiChung",
+            "floor": 5
+        }
+    },
+    {
+        "image": "./assets/yumi.jpg",
+        "name": "Yumi",
+        "age": null,
+        "email": "Yumi@example.com",
+        "address": {
+            "country": "SummonRift",
+            "city": "BOT",
+            "floor": 0
+        }
+    }
+]
